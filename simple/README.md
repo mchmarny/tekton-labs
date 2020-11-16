@@ -11,13 +11,13 @@ kubectl create ns tekton-simple
 Apply git repo resource (the repo description):
 
 ```shell
-kubectl apply -f simple/repo-resource.yaml -n tekton-simple
+kubectl apply -f repo-resource.yaml -n tekton-simple
 ```
 
 Apply the task (in this case a simple go test):
 
 ```shell
-kubectl apply -f simple/test-task.yaml -n tekton-simple
+kubectl apply -f test-task.yaml -n tekton-simple
 ```
 
 ## Run 
@@ -25,7 +25,7 @@ kubectl apply -f simple/test-task.yaml -n tekton-simple
 To run the task, apply the task run object connecting the resource and the task:
 
 ```shell
-kubectl apply -f simple/test-run.yaml -n tekton-simple
+kubectl apply -f test-run.yaml -n tekton-simple
 ```
 
 ## Monitor
@@ -72,3 +72,11 @@ tkn task start test \
     -n tekton-simple \
     --showlog
 ```
+
+## Disclaimer
+
+This is my personal project and it does not represent my employer. While I do my best to ensure that everything works, I take no responsibility for issues caused by this code.
+
+## License
+
+This software is released under the [MIT](../LICENSE)

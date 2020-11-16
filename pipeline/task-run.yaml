@@ -1,0 +1,15 @@
+apiVersion: tekton.dev/v1beta1
+kind: TaskRun
+metadata:
+  name: build-and-push
+  labels:
+    demo: pipeline
+spec:
+  serviceAccountName: build-bot
+  taskRef:
+    name: build-and-push
+  resources:
+    inputs:
+      - name: repo
+        resourceRef:
+          name: app-repo-resource

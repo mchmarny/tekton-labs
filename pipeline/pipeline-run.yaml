@@ -1,0 +1,14 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  name: test-build-push-pipeline-run
+  labels:
+    demo: simple
+spec:
+  serviceAccountName: build-bot
+  pipelineRef:
+    name: test-build-push-pipeline
+  resources:
+  - name: repo
+    resourceRef:
+      name: app-repo-resource

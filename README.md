@@ -15,6 +15,7 @@ kubectl apply -f https://storage.googleapis.com/tekton-releases/pipeline/latest/
 ## Demos
 
 * [Simple] - Simple go test on a tit repo
+* [Pipeline] - Test, build, push to DockerHub pipeline example 
 
 
 ## Disclaimer
