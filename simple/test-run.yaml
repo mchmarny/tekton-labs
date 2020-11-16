@@ -1,0 +1,14 @@
+apiVersion: tekton.dev/v1beta1
+kind: TaskRun
+metadata:
+  name: test-run
+  labels:
+    demo: simple
+spec:
+  taskRef:
+    name: test
+  resources:
+    inputs:
+      - name: repo
+        resourceRef:
+          name: app-repo-resource
