@@ -11,7 +11,7 @@ spec:
         type: git
   steps:
     - name: run-test
-      image: golang:1.15.5
+      image: golang:1.18.1
       workingDir: /workspace/repo/src
       command: ["go"]
       args: ["test"]
